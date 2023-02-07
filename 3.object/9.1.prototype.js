@@ -18,3 +18,4 @@ rabbit = new Rabbit('white')
 console.log(rabbit.isAlive)
 
 //function 은 객체이다.
+//prototype 엔 어떤객체의 주소값이 저장되어있다.
