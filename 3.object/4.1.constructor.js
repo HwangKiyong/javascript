@@ -4,7 +4,7 @@ let makeUser = function(userName, age){
         age: age
     }
 }
-
+//가독성이 좋아진다.
 makeUser = function(userName, age){
     return{
         userName,//중복되면 생략가능
@@ -38,7 +38,7 @@ console.log(typeof str)
 str = new String(1)
 console.log(typeof str)
 
-let human = new function(){
+let human = new function(){ //new를 붙이며 뒤에있는 function은 생성자이다.
     this. humanName = 'meg'
     this.age = 27
 }
@@ -55,10 +55,13 @@ function SmallUser(){
 
 //과제: new를 쓰지 않고, SmallUser().userName 을 고쳐서, error 가 발생하지 않도록 하라.
 console.log(BigUser().userName, SmallUser()?.userName)
-
+//optional chaining "?." 형식으로 써야한다.
 const user = new Object()
 console.log(user)
 user.age = 12
+/*
+객체를 생성하는 방법은 생성자 함수를 사용해서 만들거나, Object create() 메소드를 이용한다.
+*/
 // view object 
 const person = Object.create(user)
 console.log(person)

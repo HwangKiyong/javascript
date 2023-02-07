@@ -3,6 +3,7 @@ function Gun(){
 }
 
 function Shooter(shooterName, gun){
+    // this.gun = gun   Shooter has a gun 의 의미이다.    
     this.shooterName = shooterName
     this.fire = () => gun.fire()
 }
@@ -10,7 +11,8 @@ function Shooter(shooterName, gun){
 let gun = new Gun()
 let shooter1 = new Shooter('최한석', gun)
 let shooter2 = new Shooter('한아름', gun)
-
+//생성자는 객체의 틀이다. 생성자가 여러개일 필요는 없다.
+//ex) 와플기계(생성자) 하나로 와플(객체)을 여러개 만들수 있다.
 shooter1.fire()
 shooter2.fire()
 

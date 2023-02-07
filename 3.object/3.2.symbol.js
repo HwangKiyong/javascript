@@ -8,8 +8,8 @@ function src(){
     b(user)
 }
 
-function a(user){
-    user[Symbol('age')] = 12
+function a(user) {
+    user[Symbol('age')] = 12    //sybol키를 사용하는 이유는 감추기 위해서이다.
     console.log(user)
 }
 
