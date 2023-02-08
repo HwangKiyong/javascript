@@ -8,7 +8,7 @@ function greet() {
 
 greet()
 
-let fn = greet.bind(user) //this 안에 user객체를 집어넣은것을 greet function을 return 한다.
+let fn = greet.bind(user) //this 안에 user객체를 집어넣은 greet function을 return 한다.
 fn()    //bind와 call의 차이점은 bind는 주어function을 return 하고 call은 주어function을 call한다.
 
 setTimeout(fn, 100)
