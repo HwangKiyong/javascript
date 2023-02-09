@@ -11,7 +11,7 @@ class Article {
     }
 
     [Symbol.toPrimitive](hint) { 
-        return hint == 'string' ? this.title : this.viewCnt
+        return hint == 'number' ? this.viewCnt : this.title
     }   //serializing
     /*
     toString() {
