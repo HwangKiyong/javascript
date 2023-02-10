@@ -46,7 +46,7 @@ for(let val of gen())
 
 function* gen2() {
     yield* generator()
-    yield* ['a', 'b']
+    yield* ['a', 'b']   //generator 안에 generator를 넣는 효과가 발생된다.
     yield 9
 }
 

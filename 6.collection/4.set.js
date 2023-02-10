@@ -29,3 +29,5 @@ console.log(set)
 
 let arr = Array.from(set)   //set을 Array로 변환
 console.log(arr)
+
+//arr 는'push'map 은 'set'  set은 'add'로 데이터를 추가한다.
