@@ -12,14 +12,15 @@ class Food {
 }
 
 class Chef {
-    async cook() {
-        return await Promise.resolve()
-    }    
+    constructor(taste) {
+        this.cook = foodName => new Food(taste, foodName)   //수정
+    }
+
 }
 
 class Waiter {
     async order(foodName, chef) {
-        return await chef.cook(Food)
+        return chef.cook(foodName)  //수정
     }
 }
 
