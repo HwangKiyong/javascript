@@ -3,24 +3,30 @@
 */
 class Food {
     constructor(taste, foodName) {
-        this.taste = taste 
-        this.foodName = foodName        
-    }      
+        this.taste = taste
+        this.foodName = foodName
+    }
+
     [Symbol.toPrimitive]() {
         return `${this.taste} ${this.foodName}.`
-    }   //serialize이다.
+    }
 }
 
 class Chef {
     constructor(taste) {
-        this.cook = foodName => new Food(taste, foodName)   //수정
+        this.taste = taste
     }
 
+    cook(foodName) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => resolve(new Food(this.taste, foodName)), 1000)
+        })
+    }
 }
 
 class Waiter {
     async order(foodName, chef) {
-        return chef.cook(foodName)  //수정
+       return await chef.cook(foodName)
     }
 }
 
@@ -28,8 +34,4 @@ let chef1 = new Chef('달콤한')
 let chef2 = new Chef('매운')
 let waiter = new Waiter()
 
-waiter.order('짜장면', chef1)
-waiter.order('짜장면', chef2)
-
-console.log(waiter.order('짜장면', chef2) + '')
-console.log(`${waiter.order('짜장면', chef2)}`)
+waiter.order('짜장면', chef1).then(food => console.log(food + ''))
