@@ -1,7 +1,7 @@
 type Man = {
     manName: string
 }
-
+//interface와 type의 차이점은 =이 있다 없다이다.
 const man: Man = {
     manName: 'john'
 }

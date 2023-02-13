@@ -21,3 +21,5 @@ anyValue = 'hello';
 let a = 1; //number 타입
 let b = 'b'; //string  타입
 let c = true; //boolean 타입
+
+ECMAscript6
