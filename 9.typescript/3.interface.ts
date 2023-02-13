@@ -86,7 +86,7 @@ class Circle implements Shape {
     }
 
     getPerimeter(): number {
-        return 2 * Math. PI * this.radius
+        return 2 * Math.PI * this.radius
     }
 }
 

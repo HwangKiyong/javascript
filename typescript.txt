@@ -1,0 +1,7 @@
+npm i -g typescript
+tsc -version
+npm i -g ts-node
+ts-node 파일명
+
+
+cmd에서 실행시킬것
